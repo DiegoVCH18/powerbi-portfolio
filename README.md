@@ -1,29 +1,32 @@
-# 📊 Power BI Portfolio – Diego Armando Vásquez Chávez
+# 📊 Analytics & BI Portfolio – Diego Armando Vásquez Chávez
 
-Professional portfolio of analytics and Power BI projects focused on business
-intelligence, customer experience, financial education, and data-driven
+Professional portfolio of analytics, Power BI, and Looker Studio projects focused on
+business intelligence, customer experience, financial education, and data-driven
 decision-making.
 
 The projects included here combine executive dashboards, advanced KPIs,
-storytelling, and real-world analytical contexts.
+storytelling, and real-world analytical contexts across different industries
+and social impact initiatives.
 
 ---
 
 ## 👤 About me
 Industrial Engineer and Data Analytics professional with experience in Power BI,
-Python, and business-oriented analytics solutions.
+Looker Studio, Python, and business-oriented analytics solutions.
 
 I specialize in transforming data into actionable insights for decision-makers,
-with a strong focus on customer experience, financial education, and performance
-management.
+with a strong focus on customer experience, financial education, performance
+management, and transparency-driven analytics.
 
 ---
 
 ## 🔧 Tools & Skills
 - Power BI (DAX, Power Query, Data Modeling, Power BI Service)
+- Looker Studio (Google Data Studio)
 - Python (pandas, numpy, scikit-learn)
-- Business Intelligence & Analytics
+- Business Intelligence & Advanced Analytics
 - Customer Experience (CX): NPS, CSAT, CES
+- Financial & Educational Analytics
 - Data Visualization & Executive Storytelling
 - GitHub Documentation & Versioning
 
@@ -78,17 +81,31 @@ management.
 
 ---
 
+### 05️⃣ Financial & Donations Analytics – Looker Studio
+**Focus:** Financial transparency, donations, and cash flow analysis  
+**Highlights:**
+- Donation growth and donor behavior analysis
+- ABC (Pareto 80/20) donor segmentation
+- Expense structure and operational efficiency
+- Cash flow evolution and financial sustainability insights  
+
+🔗 Live Dashboard (Looker Studio)  
+📂 Folder: `05_financial_donations_looker_studio`
+
+---
+
 ## 🚀 Portfolio Scope
 Each project includes:
-- Clear business or academic context
-- Well-defined KPIs and metrics
-- Executive-level dashboards
+- Clear business, financial, or academic context
+- Well-defined KPIs and advanced metrics
+- Executive-level dashboards (Power BI & Looker Studio)
 - Key insights and decision-oriented conclusions
 - Ethical use of anonymized data for portfolio purposes
 
 ---
 
 ## 📌 Notes
-This portfolio is continuously evolving as new projects and analytical use cases
-are developed.
+This portfolio is continuously evolving as new projects, dashboards, and analytical
+use cases are developed across business, education, and social impact domains.
+
 
