@@ -28,3 +28,7 @@ This project is presented as an anonymized case study for portfolio purposes.
 
 ## 📄 Dashboard
 The full dashboard is available in PDF format in this folder.
+
+## 🔗 Interactive Dashboard
+👉 **Access the live Power BI dashboard here:** 
+https://app.powerbi.com/view?r=eyJrIjoiMGE4YTQ0MTctOTcyOS00ZWIwLTk5YTctYTMwNGYzYWIzZGFlIiwidCI6IjVjZTc1OWViLWYzNDYtNDljOC1hNTA2LWY4ODM5MTA3ZWMzOCIsImMiOjR9
