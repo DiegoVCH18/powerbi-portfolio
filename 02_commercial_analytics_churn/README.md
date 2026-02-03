@@ -104,3 +104,7 @@ Notas:
 - Pipeline principal: [`2. programa.py`](./2.%20programa.py)  
 - Verificación fin a fin: [`regenerar_pipeline.py`](./regenerar_pipeline.py)  
 - Utilitarios (paquete): [`aurelion/`](./aurelion/)
+
+## 🔗 Interactive Dashboard
+👉 **Access the live Power BI dashboard here:** 
+- https://app.powerbi.com/view?r=eyJrIjoiODUxMThiNjMtNzY3NC00MzEwLWFiN2MtZTUxOTRmZTBhZDNhIiwidCI6IjVjZTc1OWViLWYzNDYtNDljOC1hNTA2LWY4ODM5MTA3ZWMzOCIsImMiOjR9
