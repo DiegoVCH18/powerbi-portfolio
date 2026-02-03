@@ -1,0 +1,103 @@
+{
+  "proyecto": {
+    "nombre": "Proyecto Aurelion",
+    "autor": "Diego Armando Vásquez Chávez",
+    "version": "2.2",
+    "sprint_actual": 2,
+    "fecha_actualizacion": "2025-11-02"
+  },
+  "datasets": {
+    "productos": "datasets/productos.xlsx",
+    "clientes": "datasets/clientes.xlsx",
+    "ventas": "datasets/ventas.xlsx",
+    "detalle_ventas": "datasets/detalle_ventas.xlsx"
+  },
+  "export": {
+    "directory": "export"
+  },
+  "logs": {
+    "directory": "logs"
+  },
+  "docs": {
+    "directory": "docs"
+  },
+  "periodo_analisis": "12M",
+  "rutas_limpias": {
+    "productos_limpio": "datasets_limpios/productos_clean.csv",
+    "clientes_limpio": "datasets_limpios/clientes_clean.csv",
+    "ventas_limpio": "datasets_limpios/ventas_clean.csv",
+    "detalle_ventas_limpio": "datasets_limpios/detalle_clean.csv"
+  },
+  "configuracion_visualizaciones": {
+    "directorio": "visualizaciones_EDA",
+    "guardar_figuras": true,
+    "formato": "png",
+    "dpi": 120
+  },
+  "tamaños_simulacion": {
+    "productos": 140,
+    "clientes": 1200,
+    "ventas": 12000,
+    "detalle_ventas": 12000
+  },
+  "parametros_negocio": {
+    "periodo_meses": 12,
+    "pareto_alpha": 1.35,
+    "abc_thresholds": [80, 95]
+  },
+  "configuracion_clientes": {
+    "pareto_enabled": true,
+    "distribucion_abc": {
+      "A": {"porcentaje": 20, "ticket_min": 3, "ticket_max": 10},
+      "B": {"porcentaje": 15, "ticket_min": 2, "ticket_max": 8},
+      "C": {"porcentaje": 65, "ticket_min": 1, "ticket_max": 6}
+    }
+  },
+  "medios_pago": {
+    "qr": 0.55,
+    "efectivo": 0.15,
+    "tarjeta": 0.05,
+    "transferencia": 0.25
+  },
+  "estado_sprint": {
+    "sprint_2_completado": {
+      "limpieza_datos": true,
+      "eda_ejecutado": true,
+      "visualizaciones_generadas": 9,
+      "archivos_exportados": 7,
+      "rutas_actualizadas": true,
+      "notebooks": [
+        "7. Limpieza_datos.ipynb",
+        "8. EDA_Aurelion.ipynb"
+      ]
+    },
+    "sprint_3_preparacion": {
+      "pipeline_modularizado": true,
+      "logging_estructurado": true,
+      "funciones_reutilizables": true,
+      "validaciones_robustas": true
+    }
+  },
+  "metricas_calidad": {
+    "validar_integridad_referencial": true,
+    "detectar_outliers": true,
+    "analizar_correlaciones": true,
+    "calcular_abc": true,
+    "ticket_promedio": true,
+    "top_productos": true
+  },
+  "configuracion_calidad": {
+    "inyectar_problemas_simulacion": false,
+    "tasa_duplicados": 0.05,
+    "tasa_nulos": 0.04,
+    "validar_emails": true,
+    "validar_fechas": true,
+    "validar_importes": true
+  },
+  "configuracion_exportacion": {
+    "formato_csv": "utf-8-sig",
+    "incluir_timestamp": true,
+    "generar_resumen_markdown": true,
+    "logs_performance": true
+  }
+}
