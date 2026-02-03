@@ -1,110 +1,85 @@
-# 🏪 Minimarket Aurelion – README PRO
+# 🏪 Minimarket Aurelion – Retail Analytics Pipeline
 
-Proyecto de análisis de ventas minoristas con pipeline de simulación, limpieza, EDA y generación automática de reportes.
+End-to-end retail sales analytics project including data simulation, cleaning,
+exploratory analysis (EDA), ABC segmentation, and automated report generation.
 
-- Autor: Diego Armando Vásquez Chávez  
-- Curso: Fundamentos en IA – IBM & Guayerd  
-- Versión: 2.1 (1 nov 2025)
-
----
-
-## 📘 Introducción
-
-El objetivo del proyecto es identificar productos estrella, estacionalidad y segmentación ABC de clientes y artículos. El pipeline integra, limpia y analiza datos provenientes de archivos (Excel/CSV/JSON), y exporta métricas, visualizaciones y resúmenes ejecutivos.
-
-Puntos destacados:
-- Distribución de medios de pago preservada por muestreo estratificado en la simulación.
-- Limpieza con validaciones de integridad (claves, FKs, fechas, precios) y derivación de reglas de negocio (canal por medio de pago).
-- EDA con KPIs (ticket promedio, top 5, correlaciones) y clasificación ABC (productos y clientes).
-- Logging estructurado (JSONL) y métricas de ejecución por etapa.
+- **Author:** Diego Armando Vásquez Chávez  
+- **Program:** Fundamentals of AI – IBM & Guayerd  
+- **Version:** 2.1 (Nov 1, 2025)
 
 ---
 
-## 🏗️ Arquitectura
+## 📘 Introduction
 
-Componentes principales del repo:
+The objective of this project is to identify top-performing products, seasonality
+patterns, and ABC segmentation of both customers and items in a retail context.
 
-- Notebooks
-   - `4. simulador_datos_comerciales.ipynb` → Genera datasets simulados.
-   - `7. Limpieza_datos.ipynb` → Integra y limpia datos; exporta `*_clean.xlsx`.
-   - `8. EDA_Aurelion.ipynb` → EDA y visualizaciones; genera CSV y PNG.
-- Scripts
-   - `2. programa.py` → Orquestador del pipeline (limpieza, KPIs, export, logs y métricas).
-   - `regenerar_pipeline.py` → Verificación rápida y ejecución no interactiva del flujo.
-- Paquete utilitario `aurelion/`
-   - `pipeline_utils.py` → Config/rutas, lectura autodetectada (Excel/CSV/JSON), validaciones, limpieza, integración y métricas.
-   - `logging_utils.py` → Logging estructurado (consola, errors.log.jsonl, metrics.log.jsonl).
-   - `visualization_utils.py` → `generar_visualizacion()` (histograma/boxplot/heatmap/pareto).
-   - `eda_analyzer.py` → Clase `EDAAnalyzer` (KPIs, outliers, ABC, reportes CSV).
-- Datos y salidas
-   - `datasets/` y `datasets_limpios/`
-   - `export/` (CSV/JSON/txt), `visualizaciones_EDA/` (PNG), `logs/` (JSONL) y `docs/` (Markdown).
-- Configuración
-   - `5. config.json` → Rutas, parámetros y umbrales de validación.
+The pipeline integrates, cleans, and analyzes data from multiple sources
+(Excel, CSV, JSON), exporting metrics, visualizations, and executive summaries
+to support business decision-making.
+
+### Key Highlights
+- Stratified sampling preserves payment method distribution during data simulation
+- Data cleaning with integrity validations (primary keys, foreign keys, dates, prices)
+  and business rule derivation (sales channel inferred from payment method)
+- EDA including KPIs (average ticket, top 5 products, correlations) and ABC classification
+- Structured logging (JSONL) and execution metrics by pipeline stage
 
 ---
 
-## ▶️ Ejecución
+## 🏗️ Architecture
 
-Requisitos: Python 3.10+ y paquetes: pandas, numpy, matplotlib, seaborn, openpyxl.
+### Main Repository Components
 
-- Flujo recomendado (terminal de VS Code o Codespaces – PowerShell):
+#### 📓 Notebooks
+- `4. simulador_datos_comerciales.ipynb` → Generates simulated retail datasets
+- `7. Limpieza_datos.ipynb` → Data integration and cleaning; exports `*_clean.xlsx`
+- `8. EDA_Aurelion.ipynb` → Exploratory analysis and visualizations; generates CSV and PNG outputs
+
+#### ⚙️ Scripts
+- `2. programa.py` → Pipeline orchestrator (cleaning, KPIs, exports, logging, metrics)
+- `regenerar_pipeline.py` → Non-interactive full pipeline execution and validation
+
+#### 📦 Utility Package (`aurelion/`)
+- `pipeline_utils.py` → Configuration, autodetected input reading (Excel/CSV/JSON),
+  validations, cleaning, integration, and execution metrics
+- `logging_utils.py` → Structured logging (console, `errors.log.jsonl`, `metrics.log.jsonl`)
+- `visualization_utils.py` → `generar_visualizacion()` for histogram, boxplot,
+  heatmap, and Pareto charts
+- `eda_analyzer.py` → `EDAAnalyzer` class (KPIs, outlier detection, ABC segmentation,
+  CSV report generation)
+
+#### 📁 Data & Outputs
+- Raw data: `datasets/`
+- Clean data: `datasets_limpios/`
+- Exports: `export/` (CSV/JSON/TXT)
+- Visual assets: `visualizaciones_EDA/` (PNG)
+- Logs: `logs/` (JSONL)
+- Documentation: `docs/` (Markdown)
+
+#### ⚙️ Configuration
+- `5. config.json` → Paths, parameters, and validation thresholds
+
+---
+
+## ▶️ Execution
+
+### Requirements
+- Python 3.10+
+- Packages: `pandas`, `numpy`, `matplotlib`, `seaborn`, `openpyxl`
+
+### Recommended Flow (VS Code Terminal or Codespaces – PowerShell)
 
 ```powershell
-# 1) (Opcional) Generar datos simulados
+# 1) (Optional) Generate simulated data
 python "4. simulador_datos_comerciales.py"
 
-# 2) Ejecutar el pipeline (menú interactivo)
+# 2) Run the pipeline (interactive menu)
 python "2. programa.py"
 
-# 3) (Alternativa no interactiva)
+# 3) Alternative non-interactive execution
 python regenerar_pipeline.py
 
-# 4) EDA manual
-# Abrir y ejecutar: 8. EDA_Aurelion.ipynb
-```
+# 4) Manual EDA
+# Open and execute: 8. EDA_Aurelion.ipynb
 
-Notas:
-- Rutas de archivos en `5. config.json`. La lectura autodetecta formato por extensión (xlsx/csv/json).
-- Los resultados quedan en `export/`, imágenes en `visualizaciones_EDA/` y logs en `logs/`.
-
----
-
-## 📊 Resultados
-
-- Exportaciones (ejemplos):
-   - `export/distribucion_medio_pago_ventas.csv`
-   - `export/top5_productos.csv`
-   - `export/correlaciones.csv`
-   - `export/clasificacion_abc_productos.csv`, `export/clasificacion_abc_clientes.csv`
-   - `export/outliers_detectados.csv`, `export/outliers_importe_total_iqr.csv`
-   - `docs/resumen_mensual.md` (si se genera desde el pipeline)
-- Visualizaciones: `visualizaciones_EDA/*.png` (barras, heatmap, Pareto, etc.).
-- Logs y métricas:
-   - `logs/aurelion_pipeline_*.log.jsonl` (eventos del pipeline)
-   - `logs/errors.log.jsonl` (errores críticos)
-   - `logs/metrics.log.jsonl` (tiempos por etapa y resumen final)
-
----
-
-## 🚀 Próximos pasos
-
-- Procesamiento por chunks (streaming) end-to-end para CSV/NDJSON grandes.
-- Test suite (smoke + unitarios) para utils clave (validaciones y lectura autodetectada).
-- Dashboards interactivos (Streamlit/Plotly) con KPIs y filtros.
-- Validaciones extendidas: reglas por categoría de producto y umbrales diferenciales.
-
----
-
-## 🔗 Enlaces rápidos (notebooks y scripts)
-
-- Simulación de datos: [`4. simulador_datos_comerciales.ipynb`](./4.%20simulador_datos_comerciales.ipynb)  
-- Limpieza de datos: [`7. Limpieza_datos.ipynb`](./7.%20Limpieza_datos.ipynb)  
-- EDA: [`8. EDA_Aurelion.ipynb`](./8.%20EDA_Aurelion.ipynb)  
-- Pipeline principal: [`2. programa.py`](./2.%20programa.py)  
-- Verificación fin a fin: [`regenerar_pipeline.py`](./regenerar_pipeline.py)  
-- Utilitarios (paquete): [`aurelion/`](./aurelion/)
-
-## 🔗 Interactive Dashboard
-👉 **Access the live Power BI dashboard here:** 
-- https://app.powerbi.com/view?r=eyJrIjoiODUxMThiNjMtNzY3NC00MzEwLWFiN2MtZTUxOTRmZTBhZDNhIiwidCI6IjVjZTc1OWViLWYzNDYtNDljOC1hNTA2LWY4ODM5MTA3ZWMzOCIsImMiOjR9
