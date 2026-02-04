@@ -1,22 +1,22 @@
-# 📊 Analytics & BI Portfolio – Diego Armando Vásquez Chávez
+# 📊 Analytics, BI & Machine Learning Portfolio – Diego Armando Vásquez Chávez
 
-Professional portfolio of analytics, Power BI, and Looker Studio projects focused on
-business intelligence, customer experience, financial education, and data-driven
-decision-making.
+Professional portfolio of analytics, business intelligence, and applied machine
+learning projects focused on data-driven decision-making, customer experience,
+financial education, and performance management.
 
 The projects included here combine executive dashboards, advanced KPIs,
-storytelling, and real-world analytical contexts across different industries
+predictive models, and real-world analytical contexts across multiple industries
 and social impact initiatives.
 
 ---
 
 ## 👤 About me
 Industrial Engineer and Data Analytics professional with experience in Power BI,
-Looker Studio, Python, and business-oriented analytics solutions.
+Looker Studio, Python, and machine learning applications.
 
 I specialize in transforming data into actionable insights for decision-makers,
-with a strong focus on customer experience, financial education, performance
-management, and transparency-driven analytics.
+with a strong focus on customer experience, financial education, academic
+performance analytics, and transparency-driven reporting.
 
 ---
 
@@ -24,6 +24,7 @@ management, and transparency-driven analytics.
 - Power BI (DAX, Power Query, Data Modeling, Power BI Service)
 - Looker Studio (Google Data Studio)
 - Python (pandas, numpy, scikit-learn)
+- Machine Learning (Random Forest, XGBoost, CatBoost)
 - Business Intelligence & Advanced Analytics
 - Customer Experience (CX): NPS, CSAT, CES
 - Financial & Educational Analytics
@@ -94,18 +95,32 @@ management, and transparency-driven analytics.
 
 ---
 
+### 06️⃣ Academic Performance Prediction – Machine Learning App
+**Focus:** Predictive analytics for academic outcomes  
+**Highlights:**
+- Prediction of approval, failure, and absenteeism probabilities
+- Comparison of multiple ML models (Random Forest, XGBoost, CatBoost)
+- Real-time scenario simulation via deployed web application
+- End-to-end ML workflow (training, evaluation, deployment)
+
+🔗 Live Application (Hugging Face Spaces)  
+📂 Folder: `06_academic_prediction_ml_app`
+
+---
+
 ## 🚀 Portfolio Scope
 Each project includes:
 - Clear business, financial, or academic context
-- Well-defined KPIs and advanced metrics
+- Well-defined KPIs, predictive metrics, and analytical models
 - Executive-level dashboards (Power BI & Looker Studio)
+- Machine learning applications deployed for real-time interaction
 - Key insights and decision-oriented conclusions
 - Ethical use of anonymized data for portfolio purposes
 
 ---
 
 ## 📌 Notes
-This portfolio is continuously evolving as new projects, dashboards, and analytical
-use cases are developed across business, education, and social impact domains.
-
+This portfolio is continuously evolving as new projects, dashboards, and machine
+learning use cases are developed across business, education, and social impact
+domains.
 
